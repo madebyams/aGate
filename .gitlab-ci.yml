@@ -3,7 +3,7 @@ image: ghcr.io/anothersimplecoder/cmake:latest
 stages:
   - build
 
-aclip:
+agate:
   stage: build
   tags:
     - amd64
