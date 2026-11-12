@@ -1,0 +1,19 @@
+image: debian/stable
+packages:
+  - build-essential
+  - cmake
+  - pkg-config
+  - libxext-dev
+  - libxrandr-dev
+  - libxinerama-dev
+  - libxcursor-dev
+  - libxi-dev
+  - libgtk-3-dev
+  - libasound2-dev
+sources:
+  - https://git.sr.ht/~itsams_wav/agate
+tasks:
+  - build: |
+      cd agate
+      cmake -B build -DCMAKE_BUILD_TYPE=Release
+      cmake --build build --config Release --parallel
